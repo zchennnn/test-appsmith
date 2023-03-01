@@ -24,11 +24,16 @@
       "headers": [
         {
           "key": "content-type",
-          "value": "application/json"
+          "value": "text/plain"
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "button",
+          "value": "{{Button3.text}}"
+        }
+      ],
       "bodyFormData": [
         {
           "type": "TEXT"
@@ -42,15 +47,21 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "text/plain"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [
+      {
+        "key": "queryParameters[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Button3.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
