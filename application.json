@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "id": "Slack Bot",
+      "id": "Customer messaging",
       "isDefault": false
     },
     {
@@ -12,8 +12,8 @@
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
-  "color": "#C7F3E3",
-  "icon": "bar-graph",
+  "color": "#FFEFDB",
+  "icon": "hospital",
   "unpublishedAppLayout": {
     "type": "DESKTOP"
   },

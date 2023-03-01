@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "postToSlack",
+    "name": "Api1",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
-      "organizationId": "61b6d49e33c6ae6163af2716",
       "datasourceConfiguration": {
-        "url": "{{sel_channels.selectedOptionValue}}"
+        "url": "https://mock-api.appsmith.com"
       },
       "invalids": [],
       "messages": [],
@@ -17,53 +16,47 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Slack Bot",
+    "pageId": "Page1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
-      "paginationType": "NONE",
-      "path": "",
+      "paginationType": "PAGE_NO",
+      "path": "/users",
       "headers": [
         {
-          "key": "Content-type",
+          "key": "content-type",
           "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n    \"text\": \"{{Input1.text}}\"\n}",
-      "httpMethod": "POST",
+      "bodyFormData": [
+        {
+          "type": "TEXT"
+        }
+      ],
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
-      ]
+      ],
+      "formData": {
+        "apiContentType": "application/json"
+      }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      },
-      {
-        "key": "path"
-      },
-      {
-        "key": "datasourceUrl"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "Input1.text",
-      "sel_channels.selectedOptionValue"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
-    "confirmBeforeExecute": true,
+    "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Slack Bot_postToSlack",
+  "id": "Page1_Api1",
   "deleted": false,
-  "gitSyncId": "63fd9a31990f7d4baf444b21_2023-02-28T07:24:12.973798138Z"
+  "gitSyncId": "63fd9a31990f7d4baf444b21_63fe08bf990f7d4baf4453fe"
 }
